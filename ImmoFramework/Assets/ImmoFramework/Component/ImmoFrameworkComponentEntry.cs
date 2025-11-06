@@ -10,7 +10,7 @@ namespace Immo.Framework.Component
     /// <summary>
     /// Global access point to all game components.
     /// </summary>
-    public static class ImmoFrameworkGameEntry
+    public static class ImmoFrameworkComponentEntry
     {
         private static readonly List<ImmoFrameworkComponent> s_GameComponents = new List<ImmoFrameworkComponent>();
 

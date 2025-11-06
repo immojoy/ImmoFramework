@@ -7,7 +7,7 @@ namespace Immo.Framework.Component
     {
         protected virtual void Awake()
         {
-            ImmoFrameworkGameEntry.RegisterComponent(this);
+            ImmoFrameworkComponentEntry.RegisterComponent(this);
         }
     }
 }

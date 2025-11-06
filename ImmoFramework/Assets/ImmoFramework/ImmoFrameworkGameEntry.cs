@@ -6,8 +6,8 @@ using UnityEngine;
 namespace Immo.Framework
 {
     [DisallowMultipleComponent]
-    [AddComponentMenu("ImmoFramework/Immo Game Entry")]
-    public sealed partial class ImmoGameEntry : MonoBehaviour
+    [AddComponentMenu("ImmoFramework/ImmoFramework Game Entry")]
+    public sealed partial class ImmoFrameworkGameEntry : MonoBehaviour
     {
         private void Start()
         {

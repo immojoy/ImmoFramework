@@ -6,7 +6,7 @@ using Immo.Framework.Component.Event;
 
 namespace Immo.Framework
 {
-    public sealed partial class ImmoGameEntry : MonoBehaviour
+    public sealed partial class ImmoFrameworkGameEntry : MonoBehaviour
     {
         public static ImmoFrameworkBaseComponent BaseComponent
         {
@@ -22,8 +22,8 @@ namespace Immo.Framework
 
         private void InitializeBuiltinComponents()
         {
-            BaseComponent = ImmoFrameworkGameEntry.GetComponent<ImmoFrameworkBaseComponent>();
-            EventComponent = ImmoFrameworkGameEntry.GetComponent<ImmoFrameworkEventComponent>();
+            BaseComponent = ImmoFrameworkComponentEntry.GetComponent<ImmoFrameworkBaseComponent>();
+            EventComponent = ImmoFrameworkComponentEntry.GetComponent<ImmoFrameworkEventComponent>();
         }
     }
 }
