@@ -35,7 +35,7 @@ public class EventParticipatorA : MonoBehaviour
     {
         if (GUILayout.Button("Register Greeting Event"))
         {
-            ImmoGameEntry.EventComponent.RegisterEventHandler(new GreetingEventHandler());
+            ImmoFrameworkGameEntry.EventComponent.RegisterEventHandler(new GreetingEventHandler());
         }
     }
 }

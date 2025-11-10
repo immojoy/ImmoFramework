@@ -19,7 +19,7 @@ public class EventParticipatorB : MonoBehaviour
 
         if (GUILayout.Button("Trigger Greeting Event"))
         {
-            ImmoGameEntry.EventComponent.TriggerEvent(new GreetingEvent(this, "Hello from EventParticipatorB!"));
+            ImmoFrameworkGameEntry.EventComponent.TriggerEvent(new GreetingEvent(this, "Hello from EventParticipatorB!"));
         }
     }
 }
