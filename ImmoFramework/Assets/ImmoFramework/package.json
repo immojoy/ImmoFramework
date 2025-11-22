@@ -5,11 +5,5 @@
     "description": "A modular Unity game framework.",
     "author": {
         "name": "ImmoJoy"
-    },
-
-    
-    "dependencies": {
-        "com.unity.addressables": "1.21.21",
-        "com.cysharp.unitask": "2.5.10"
     }
 }
