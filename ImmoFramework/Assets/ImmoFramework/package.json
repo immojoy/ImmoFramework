@@ -5,5 +5,9 @@
     "description": "A modular Unity game framework.",
     "author": {
         "name": "ImmoJoy"
+    },
+
+    "dependencies": {
+        "com.unity.addressables": "1.21.21"
     }
 }
