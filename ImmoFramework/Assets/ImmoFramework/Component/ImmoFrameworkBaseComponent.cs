@@ -5,8 +5,6 @@ using Immo.Framework.Core;
 
 namespace Immo.Framework.Component
 {
-    [DisallowMultipleComponent]
-    [AddComponentMenu("ImmoFramework/Component/ImmoFramework Base")]
     public sealed class ImmoFrameworkBaseComponent : ImmoFrameworkComponent
     {
         protected override void Awake()
@@ -22,7 +20,7 @@ namespace Immo.Framework.Component
 
         private void Update()
         {
-            ImmoFrameworkEntry.Tick();
+            ImmoFrameworkEntry.Update();
         }
     }
 }

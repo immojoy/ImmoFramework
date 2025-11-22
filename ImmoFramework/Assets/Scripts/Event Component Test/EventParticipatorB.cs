@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 
-using Immo.Framework;
+using ImmoFramework.Runtime;
 
 public class EventParticipatorB : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class EventParticipatorB : MonoBehaviour
 
         if (GUILayout.Button("Trigger Greeting Event"))
         {
-            ImmoFrameworkGameEntry.EventComponent.TriggerEvent(new GreetingEvent(this, "Hello from EventParticipatorB!"));
+            IFGameEntry.EventComponent.TriggerEvent(new GreetingEvent(this, "Hello from EventParticipatorB!"));
         }
     }
 }

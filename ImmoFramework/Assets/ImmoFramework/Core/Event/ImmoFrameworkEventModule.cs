@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Immo.Framework.Core.Event
 {
-    internal sealed class ImmoFrameworkEventModule : ImmoFrameworkModule, IImmoFrameworkEventModule
+    internal sealed class ImmoFrameworkEventModule : ImmoFrameworkModule
     {
         private readonly Dictionary<Type, List<IImmoFrameworkEventHandler>> m_EventHandlers = new Dictionary<Type, List<IImmoFrameworkEventHandler>>();
         private readonly Queue<ImmoFrameworkEvent> m_EventQueue = new Queue<ImmoFrameworkEvent>();
@@ -58,7 +58,7 @@ namespace Immo.Framework.Core.Event
             ProcessEvent(e);
         }
 
-        public override void Tick()
+        public override void Update()
         {
             while (true)
             {

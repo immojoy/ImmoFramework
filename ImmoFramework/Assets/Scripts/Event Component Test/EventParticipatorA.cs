@@ -1,11 +1,9 @@
 using System;
 using UnityEngine;
 
-using Immo.Framework;
-using Immo.Framework.Core;
-using Immo.Framework.Core.Event;
+using ImmoFramework.Runtime;
 
-public class GreetingEvent : ImmoFrameworkEvent
+public class GreetingEvent : IFEvent
 {
     public string Message { get; private set; }
 
@@ -16,7 +14,7 @@ public class GreetingEvent : ImmoFrameworkEvent
     }
 }
 
-public class GreetingEventHandler : ImmoFrameworkEventHandler<GreetingEvent>
+public class GreetingEventHandler : IFEventHandler<GreetingEvent>
 {
     public override void HandleEvent(GreetingEvent e)
     {
@@ -35,7 +33,7 @@ public class EventParticipatorA : MonoBehaviour
     {
         if (GUILayout.Button("Register Greeting Event"))
         {
-            ImmoFrameworkGameEntry.EventComponent.RegisterEventHandler(new GreetingEventHandler());
+            IFGameEntry.EventComponent.RegisterHandler(new GreetingEventHandler());
         }
     }
 }

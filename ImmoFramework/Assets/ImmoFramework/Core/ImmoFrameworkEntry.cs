@@ -13,11 +13,11 @@ namespace Immo.Framework.Core
         private static readonly List<ImmoFrameworkModule> s_ImmoFrameworkModules = new List<ImmoFrameworkModule>();
 
 
-        public static void Tick()
+        public static void Update()
         {
             foreach (ImmoFrameworkModule module in s_ImmoFrameworkModules)
             {
-                module.Tick();
+                module.Update();
             }
         }
 

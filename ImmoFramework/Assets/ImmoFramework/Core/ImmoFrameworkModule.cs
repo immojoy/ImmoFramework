@@ -6,6 +6,6 @@ namespace Immo.Framework.Core
 {
     public abstract class ImmoFrameworkModule
     {
-        public abstract void Tick();
+        public abstract void Update();
     }
 }

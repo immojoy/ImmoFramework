@@ -4,7 +4,7 @@
     "displayName": "Immo Framework",
     "description": "A modular Unity game framework.",
     "dependencies": {
-
+        "com.unity.addressables": "1.21.21"
     },
     "author": {
         "name": "ImmoJoy"

@@ -1,16 +1,15 @@
+
 using System;
 using UnityEngine;
 
-using Immo.Framework.Core;
-using Immo.Framework.Core.Event;
 
-
-namespace Immo.Framework.Component.Event
+namespace ImmoFramework.Runtime
 {
-    
-    public sealed class ImmoFrameworkEventComponent : ImmoFrameworkComponent
+    [DisallowMultipleComponent]
+    [AddComponentMenu("ImmoFramework/Component/ImmoFramework Event")]
+    public sealed class IFEventComponent : IFComponent
     {
-        private ImmoFrameworkEventModule m_EventModule;
+        private IFEventModule m_EventModule;
 
 
         #region Unity Callbacks
@@ -18,7 +17,7 @@ namespace Immo.Framework.Component.Event
         {
             base.Awake();
 
-            m_EventModule = ImmoFrameworkEntry.GetModule<ImmoFrameworkEventModule>();
+            m_EventModule = IFModuleEntry.GetModule<IFEventModule>();
             if (m_EventModule == null)
             {
                 Debug.LogError("Invalid event module.");
@@ -36,35 +35,34 @@ namespace Immo.Framework.Component.Event
         /// <summary>
         /// Registers an event handler for a specific event type.
         /// </summary>
-        /// <param name="handler">Event handler to register.</param>
-        public void RegisterEventHandler<T>(ImmoFrameworkEventHandler<T> handler) where T : ImmoFrameworkEvent
+        public void RegisterHandler<T>(IFEventHandler<T> handler) where T : IFEvent
         {
             m_EventModule.RegisterHandler(handler);
         }
 
+
         /// <summary>
         /// Unregisters an event handler for a specific event type.
         /// </summary>
-        /// <param name="handler">Event handler to unregister.</param>
-        public void UnregisterEventHandler<T>(ImmoFrameworkEventHandler<T> handler) where T : ImmoFrameworkEvent
+        public void UnregisterHandler<T>(IFEventHandler<T> handler) where T : IFEvent
         {
             m_EventModule.UnregisterHandler(handler);
         }
 
+
         /// <summary>
         /// Triggers an event of a specific type. This method is thread-safe.
         /// </summary>
-        /// <param name="e">Event to trigger.</param>
-        public void TriggerEvent<T>(T e) where T : ImmoFrameworkEvent
+        public void TriggerEvent<T>(T e) where T : IFEvent
         {
             m_EventModule.TriggerEvent(e);
         }
-        
+
+
         /// <summary>
-        /// Triggers an event of a specific type immediately. This method is not thread-safe.
+        /// Triggers an event of a specific type immediately.
         /// </summary>
-        /// <param name="e">Event to trigger.</param>
-        public void TriggerEventImmediately<T>(T e) where T : ImmoFrameworkEvent
+        public void TriggerEventImmediately<T>(T e) where T : IFEvent
         {
             m_EventModule.TriggerEventImmediately(e);
         }
