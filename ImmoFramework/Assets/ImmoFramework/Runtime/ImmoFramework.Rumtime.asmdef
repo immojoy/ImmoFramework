@@ -1,7 +1,10 @@
 {
     "name": "ImmoFramework.Runtime",
     "rootNamespace": "ImmoFramework.Runtime",
-    "references": [],
+    "references": [
+        "Unity.Addressable",
+        "Unity.ResourceManager"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
