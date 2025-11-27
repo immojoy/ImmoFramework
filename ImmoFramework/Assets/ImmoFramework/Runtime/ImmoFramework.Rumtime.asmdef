@@ -2,7 +2,7 @@
     "name": "ImmoFramework.Runtime",
     "rootNamespace": "ImmoFramework.Runtime",
     "references": [
-        "Unity.AddressableAssets",
+        "Unity.Addressables",
         "Unity.ResourceManager"
     ],
     "includePlatforms": [],

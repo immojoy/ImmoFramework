@@ -2,7 +2,9 @@
     "name": "ImmoFramework.Editor",
     "rootNamespace": "ImmoFramework.Editor",
     "references": [
-        "ImmoFramework.Runtime"
+        "ImmoFramework.Runtime",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [
         "Editor"
