@@ -156,8 +156,8 @@ namespace ImmoFramework.Runtime
                 instance.Instance.name = string.Format("{0} - {1}", entityAssetName, entityDataForShow.SerialId);
             }
 
-            entity.Initialize(entityDataForShow.EntityData);
-            entity.Show(entityDataForShow.EntityData);
+            entity.Initialize(entityDataForShow);
+            entity.Show(entityDataForShow);
         }
 
 

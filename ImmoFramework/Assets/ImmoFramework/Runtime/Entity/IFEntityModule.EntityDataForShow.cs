@@ -12,7 +12,7 @@ namespace ImmoFramework.Runtime
         /// <summary>
         /// Entity data used during the showing process
         /// </summary>
-        private sealed class EntityDataForShow
+        public sealed class EntityDataForShow
         {
             /// <summary>
             ///     <para> Unique serial identifier for the entity </para>

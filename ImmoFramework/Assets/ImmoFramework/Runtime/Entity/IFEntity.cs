@@ -88,14 +88,27 @@ namespace ImmoFramework.Runtime
             // TODO: Initialize entity logic by its type and initialize it
             // If there is already an existing logic, consider reusing or replacing it
             // If it's the same type as the old one, reuse it, otherwise replace it
-            m_EntityLogic = gameObject.GetComponent<SampleEntityLogic>();
+            IFEntityModule.EntityDataForShow entityDataForShow = (IFEntityModule.EntityDataForShow)data;
+            Type logicType = entityDataForShow.LogicType;
+            if (logicType == null)
+            {
+                Debug.LogError("Logic type is null.");
+                return;
+            }
+
             if (m_EntityLogic != null)
             {
+                if (m_EntityLogic.GetType() == logicType)
+                {
+                    m_EntityLogic.enabled = true;
+                    return;
+                }
+
                 Destroy(m_EntityLogic);
                 m_EntityLogic = null;
             }
 
-            m_EntityLogic = gameObject.AddComponent<SampleEntityLogic>();
+            m_EntityLogic = (IFEntityLogic)gameObject.AddComponent(logicType);
             m_EntityLogic.Initialize(data);
 
             transform.SetParent(m_EntityGroup.RootTransform);
