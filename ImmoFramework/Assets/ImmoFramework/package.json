@@ -1,8 +1,8 @@
 {
     "name": "com.immojoy.immo-framework",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "displayName": "Immo Framework",
-    "description": "A modular Unity game framework.",
+    "description": "ImmoJoy Unity modular game framework.",
     "author": {
         "name": "ImmoJoy"
     },
