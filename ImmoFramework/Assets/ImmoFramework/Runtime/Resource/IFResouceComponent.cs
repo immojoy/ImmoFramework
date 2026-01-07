@@ -35,6 +35,12 @@ namespace ImmoFramework.Runtime
         #endregion
 
 
+        public void LoadAssetAsyncWithCallbacks<T>(string assetAddress, IFLoadAssetSuccessCallback successCallback, object data) where T : UnityEngine.Object
+        {
+            m_ResourceModule.LoadAssetAsyncWithCallbacks<T>(assetAddress, successCallback, data);
+        }
+
+
         public async Task<T> LoadAssetAsync<T>(string assetAddress) where T : UnityEngine.Object
         {
             return await m_ResourceModule.LoadAssetAsync<T>(assetAddress);
