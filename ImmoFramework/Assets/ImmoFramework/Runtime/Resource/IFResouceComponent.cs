@@ -57,5 +57,11 @@ namespace ImmoFramework.Runtime
         {
             return m_ResourceModule.IsAssetLoaded(assetAddress);
         }
+
+
+        public void ReleaseAsset(string assetAddress)
+        {
+            m_ResourceModule.ReleaseAsset(assetAddress);
+        }
     }
 }
